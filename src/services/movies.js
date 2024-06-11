@@ -3,7 +3,7 @@ export const serchMovies = async ({ query }) => {
 
   try {
     const response = await fetch(
-      `https://www.omdbapi.com/?apikey=1bb6165&s=${query}`
+      `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY ?? "1111"}&s=${query}`
     );
     const json = await response.json();
 
